@@ -2,7 +2,6 @@
 #include "usart.h"
 #include "SPI.h"
 
-
 /***************  系统自检  ***************/
 void Test(){
 	uint32_t flash_id = Flash_ReadID();
