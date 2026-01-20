@@ -1,21 +1,20 @@
 #include "instruction_set.h"
 #include "usart.h"
 #include "SPI.h"
-#include "usart.h"
 
 
-/***************  ÏµÍ³×Ô¼ì  ***************/
+/***************  ç³»ç»Ÿè‡ªæ£€  ***************/
 void Test(){
 	uint32_t flash_id = Flash_ReadID();
 	printf("\r\n====== System Selftest ======\r\n");
 	
-	if(flash_id != 0 && flash_id != 0xFFFFFF){ 							//Flash ID¶ÁÈ¡
+	if(flash_id != 0 && flash_id != 0xFFFFFF){ 							//Flash IDè¯»å–
         printf("\r\nFlash ID.......0x%06X (ok)\r\n", flash_id);
     } else {
         printf("\r\nFlash ID.......can not read\r\n");
     }
 	
-	if(SD_Is_Present() == 1){											//SD¿¨¼ì²â
+	if(SD_Is_Present() == 1){											//SDå¡æ£€æµ‹
 		printf("\r\nTF card........ok\r\n");
 	}else{
 		printf("\r\nTF card........error\r\n");
@@ -26,8 +25,8 @@ void Test(){
 
 
 
-/***************  Ê±¼äÉèÖÃ  ***************/
-/**********  ÉèÖÃ»ù×¼Ê±¼ä  **********/
+/***************  æ—¶é—´è®¾ç½®  ***************/
+/**********  è®¾ç½®åŸºå‡†æ—¶é—´  **********/
 void RTC_Config(){
 	
 	
@@ -35,7 +34,7 @@ void RTC_Config(){
 	
 }
 
-/**********  ÏÔÊ¾µ±Ç°Ê±¼ä  **********/
+/**********  æ˜¾ç¤ºå½“å‰æ—¶é—´  **********/
 void RTC_now(){
 	
 	
@@ -43,7 +42,7 @@ void RTC_now(){
 }
 
 
-/***************  ¶ÁÈ¡ÅäÖÃ  ***************/
+/***************  è¯»å–é…ç½®  ***************/
 void cond(){
 	
 	
